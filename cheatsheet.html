@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python to Java Cheatsheet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .section {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        pre {
+            background-color: #000000;
+            border-radius: 5px;
+            padding: 10px;
+            overflow-x: auto;
+            position: relative;
+            margin: 0;
+        }
+        pre:hover {
+            background-color: #302727;
+            transition: background-color 0.3s ease;
+        }
+
+        h2 {
+            text-align: center;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Python to Java Cheatsheet</h1>
+    <div class="container">
+        <!-- Variables -->
+        <div class="section">
+            <h2>Python: Variable Initialization</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+<code class="language-python"># Integer
+a = 10
+
+# Float
+b = 3.14
+
+# Tuple
+c = (1, 2, 3)
+
+# String
+d = "Hello"
+
+# List
+e = [1, 2, 3, 4]
+
+# Dictionary
+f = {"key": "value", "age": 30}</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: Variable Initialization</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+<code class="language-java">// Integer
+int a = 10;
+
+// Float
+float b = 3.14f;
+
+// Tuple (use arrays or custom classes)
+int[] c = {1, 2, 3};
+
+// String
+String d = "Hello";
+
+// List (ArrayList)
+List<Integer> e = Arrays.asList(1, 2, 3, 4);
+
+// Dictionary (HashMap)
+Map<String, Object> f = new HashMap<>();
+f.put("key", "value");
+f.put("age", 30);</code>
+            </pre>
+        </div>
+
+        <!-- Functions -->
+        <div class="section">
+            <h2>Python: Functions</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-python">
+def add(a, b):
+    return a + b
+
+# Using built-in functions
+numbers = [1, 2, 3]
+result = sum(numbers)
+print(result)  # Output: 6</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: Functions</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-java">
+public int add(int a, int b) {
+    return a + b;
+}
+
+// Using built-in functions
+int[] numbers = {1, 2, 3};
+int result = Arrays.stream(numbers).sum();
+System.out.println(result);  // Output: 6</code>
+            </pre>
+        </div>
+
+        <!-- Loops -->
+        <div class="section">
+            <h2>Python: Loops</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-python"># For loop
+for i in range(5):
+    print(i)
+
+# While loop
+n = 5
+while n > 0:
+    print(n)
+    n -= 1
+
+# Nested loops
+for i in range(3):
+    for j in range(2):
+        print(i, j)</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: Loops</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+<code class="language-java">// For loop
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+
+// While loop
+int n = 5;
+while (n > 0) {
+    System.out.println(n);
+    n--;
+}
+
+// Nested loops
+for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 2; j++) {
+        System.out.println(i + ", " + j);
+    }
+}</code>
+            </pre>
+        </div>
+
+        <!-- Conditional Statements -->
+        <div class="section">
+            <h2>Python: Conditional Statements</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-python"># If-else statement
+x = 10
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is 5 or less")
+
+# Elif statement
+if x > 15:
+    print("x is greater than 15")
+elif x > 10:
+    print("x is greater than 10")
+else:
+    print("x is 10 or less")</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: Conditional Statements</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-java">// If-else statement
+int x = 10;
+if (x > 5) {
+    System.out.println("x is greater than 5");
+} else {
+    System.out.println("x is 5 or less");
+}
+
+// Else-if statement
+if (x > 15) {
+    System.out.println("x is greater than 15");
+} else if (x > 10) {
+    System.out.println("x is greater than 10");
+} else {
+    System.out.println("x is 10 or less");
+}</code>
+            </pre>
+        </div>
+
+        <!-- Classes and Objects -->
+        <div class="section">
+            <h2>Python: Classes and Objects</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-python">
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
+
+person = Person("Alice", 30)
+print(person.greet())</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: Classes and Objects</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-java">
+class Person {
+    String name;
+    int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String greet() {
+        return "Hello, my name is " + name + " and I am " + age + " years old.";
+    }
+}
+
+Person person = new Person("Alice", 30);
+System.out.println(person.greet());</code>
+            </pre>
+        </div>
+                <div class="section">
+            <h2>Python: Hello World</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-python"># Hello World Program
+print("Hello, World!")</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: Hello World</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-java">// Hello World Program
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code>
+            </pre>
+        </div>
+
+        <!-- User Input -->
+        <div class="section">
+            <h2>Python: Taking User Input</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-python"># Taking user input
+name = input("Enter your name: ")
+print(f"Hello, {name}!")</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: Taking User Input</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-java">// Taking user input
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+    }
+}</code>
+            </pre>
+        </div>
+
+        <!-- Flow Control: If Statement -->
+        <div class="section">
+            <h2>Python: If Statement</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-python"># If Statement
+x = 10
+if x > 5:
+    print("x is greater than 5")</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: If Statement</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-java">// If Statement
+int x = 10;
+if (x > 5) {
+    System.out.println("x is greater than 5");
+}</code>
+            </pre>
+        </div>
+
+        <!-- Methods: Static vs Instance -->
+        <div class="section">
+            <h2>Python: Methods</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-python"># Static Method
+class Math:
+    @staticmethod
+    def square(x):
+        return x * x
+
+# Instance Method
+class Calculator:
+    def add(self, a, b):
+        return a + b
+
+print(Math.square(5))  # Output: 25
+calc = Calculator()
+print(calc.add(2, 3))  # Output: 5</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: Methods</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-java">// Static Method
+class Math {
+    public static int square(int x) {
+        return x * x;
+    }
+}
+
+// Instance Method
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Math.square(5));  // Output: 25
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(2, 3));  // Output: 5
+    }
+}</code>
+            </pre>
+        </div>
+
+        <!-- Arrays -->
+        <div class="section">
+            <h2>Python: Arrays</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-python"># Arrays using list
+arr = [1, 2, 3, 4]
+
+# Multi-dimensional Array
+matrix = [[1, 2], [3, 4]]
+
+# Access elements
+print(arr[0])  # Output: 1
+print(matrix[1][1])  # Output: 4</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: Arrays</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-java">// Arrays
+int[] arr = {1, 2, 3, 4};
+
+// Multi-dimensional Array
+int[][] matrix = {{1, 2}, {3, 4}};
+
+// Access elements
+System.out.println(arr[0]);  // Output: 1
+System.out.println(matrix[1][1]);// Output: 4</code>  
+            </pre>
+        </div>
+
+        <!-- Strings -->
+        <div class="section">
+            <h2>Python: Strings</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                <code class="language-python"># String Operations
+s = "Hello"
+
+# Concatenation
+s2 = s + " World"
+print(s2)  # Output: Hello World
+
+# Substring
+print(s[1:4])  # Output: ell</code>
+            </pre>
+        </div>
+        <div class="section">
+            <h2>Java: Strings</h2>
+            <pre>
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+<code class="language-java">// String Operations
+String s = "Hello";
+
+// Concatenation
+String s2 = s + " World";
+System.out.println(s2);  // Output: Hello World
+
+// Substring
+System.out.println(s.substring(1, 4));// Output: ell</code>  
+            </pre>
+        </div>
+    </div>
+    <script>
+        function copyToClipboard(button) {
+            const pre = button.nextElementSibling; // The <pre> tag next to the button
+            const textToCopy = pre.textContent;
+
+            // Copy the text to the clipboard
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+    <!-- Highlight.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+    <script>
+        hljs.highlightAll();
+
+        function copyToClipboard(button) {
+            const pre = button.nextElementSibling; // The <code> tag next to the button
+            const textToCopy = pre.textContent;
+
+            // Copy the text to the clipboard
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
